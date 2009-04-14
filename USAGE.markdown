@@ -1,4 +1,4 @@
-This is a copypaste of README from http://github.com/dwalters/css-dryer
+This is a copypaste of README from http://github.com/airblade/css_dryer
 
 # CssDryer -- Eliminate Repetition In Your Stylesheets
 ## Introduction
