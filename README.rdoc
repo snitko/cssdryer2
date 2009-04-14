@@ -3,7 +3,7 @@
 This gem is based on Rails plugin 'css_dryer': http://github.com/airblade/css_dryer.
 Unlike 'css_dryer', this one doesn't create any controllers and views.
 Instead, it acts more like SASS, but uses css_dryer parser (which allows you to use completely
-conventional css-synax and write one-line css rules).
+conventional css-syntax and write one-line css rules).
 
 * Read 'install' section to find out how to use it with Rails or any other Ruby appplication.
 * Read USAGE.markdown file to learn about css_dryer parser (copypasted from css_dryer REAME).
