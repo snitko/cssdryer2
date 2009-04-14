@@ -5,9 +5,9 @@ Gem::Specification.new do |s|
   s.email = "roman@snitko.ru"
   s.homepage = "http://github.com/snitko/css_dryer_2"
   s.summary = "Parses dry css files and generates conventional css"
-  s.files = FileList["{lib}/**/*", "{generators}/**/*"].to_a
+  s.files = Dir.glob("{lib}/**/*", "{generators}/**/*").to_a
   s.require_path = "lib"
-  s.test_files = FileList["{spec}/*"].to_a
+  s.test_files = Dir.glob("{spec}/*").to_a
   s.has_rdoc = true
   s.extra_rdoc_files = ["README.rdoc"]
   s.add_dependency("activeresource")
