@@ -14,7 +14,11 @@ conventional css-synax and write one-line css rules).
 
 == INSTALL:
 
-1) sudo gem install css_dryer_2
+1) 
+
+  sudo gem sources -a http://gems.github.com
+  sudo gem install snitko-css_dryer_2
+
 2) If you're planning to use it with rails application, then
 go to rails application folder and run 'script/generate css_dryer'.
 This will generate neccessary rake tasks.
