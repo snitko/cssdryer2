@@ -6,7 +6,7 @@ Instead, it acts more like SASS, but uses css_dryer parser (which allows you to 
 conventional css-syntax and write one-line css rules).
 
 * Read 'install' section to find out how to use it with Rails or any other Ruby appplication.
-* Read USAGE.markdown file to learn about css_dryer parser (copypasted from css_dryer REAME).
+* Read USAGE.markdown file to learn about css_dryer parser (copypasted from css_dryer README).
 
 == REQUIREMENTS:
 
@@ -29,7 +29,10 @@ This will generate neccessary rake tasks.
 
 4) In dev environment, to generate css on any changes in .ncss files, put this in ApplicationController:
 
-  CssDryer2::FilesHandler.new(:settings => :rails).run if RAILS_ENV == 'development'
+  before_filter :ncss
+  def ncss
+    CssDryer2::FilesHandler.new(:settings => :rails).run if RAILS_ENV == 'development'
+  end
 
 You can also set custom directories for files, instead of using rails shortcut option:
 
