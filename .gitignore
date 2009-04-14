@@ -1,1 +1,3 @@
 pkg/
+!spec/tmp/
+!spec/tmp/css_dryer_2/
