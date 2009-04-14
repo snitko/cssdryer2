@@ -10,52 +10,52 @@ conventional css-synax and write one-line css rules).
 
 == REQUIREMENTS:
 
-  * ActiveResource gem
+* ActiveResource gem
 
 == INSTALL:
 
-  1. sudo gem install css_dryer_2
-  2. If you're planning to use it with rails application, then
-     go to rails application folder and run 'script/generate css_dryer'.
-     This will generate neccessary rake tasks.
-      
-  3. Put this is config/environments/development.rb:
+1) sudo gem install css_dryer_2
+2) If you're planning to use it with rails application, then
+go to rails application folder and run 'script/generate css_dryer'.
+This will generate neccessary rake tasks.
+    
+3) Put this is config/environments/development.rb:
 
-        require 'css_dryer_2'
+  require 'css_dryer_2'
 
-  4. In dev environment, to generate css on any changes in .ncss files, put this in ApplicationController:
+4) In dev environment, to generate css on any changes in .ncss files, put this in ApplicationController:
 
-        CssDryer2::FilesHandler.new(:settings => :rails).run if RAILS_ENV == 'development'
+  CssDryer2::FilesHandler.new(:settings => :rails).run if RAILS_ENV == 'development'
 
-     You can also set custom directories for files, instead of using rails shortcut option:
+You can also set custom directories for files, instead of using rails shortcut option:
 
-        CssDryer2::FilesHandler.new(
-          :source_path  => 'my_css_dir/ncss',
-          :compile_path => 'my_css_dir',
-          :tmp_path     => '/tmp',
-          :force_compile => true
-        )
+  CssDryer2::FilesHandler.new(
+    :source_path  => 'my_css_dir/ncss',
+    :compile_path => 'my_css_dir',
+    :tmp_path     => '/tmp',
+    :force_compile => true
+  )
 
 
-  5. While rails application to production, run rake task:
+5) While rails application to production, run rake task:
 
-        rake ncss:compile
+  rake ncss:compile
 
-  6. Now put your .ncss files in your 'public/stylesheets/ncss/' dir.
-     The compiler will put generated css files in 'public/stylesheets/' dir.
+6) Now put your .ncss files in your 'public/stylesheets/ncss/' dir.
+The compiler will put generated css files in 'public/stylesheets/' dir.
 
 
 == HOW IT WORKS:
 
-  When you fire 'run' method, CssDryer2::FileHandler object checks if the .ncss files
-  changed (it stores their SHA1 in tmp dir). If they did, it recompiles them.
+When you fire 'run' method, CssDryer2::FileHandler object checks if the .ncss files
+changed (it stores their SHA1 in tmp dir). If they did, it recompiles them.
 
-  For Rails application it assumes that you store your .ncss files in 'public/stylesheets/ncss',
-  and it compiles .css files in 'public/stylesheets'.
-  You might want to add 'public/stylesheets/*.css' into your '.gitignore' file 
+For Rails application it assumes that you store your .ncss files in 'public/stylesheets/ncss',
+and it compiles .css files in 'public/stylesheets'.
+You might want to add 'public/stylesheets/*.css' into your '.gitignore' file 
 
-  You can force reompile by providing the run method with':force_recompile => true' argument.
-  You can also recompile at any time by running 'rake ncss:compile'
+You can force reompile by providing the run method with':force_recompile => true' argument.
+You can also recompile at any time by running 'rake ncss:compile'
 
 
 == LICENSE:
