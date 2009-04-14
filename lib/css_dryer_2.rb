@@ -1,0 +1,7 @@
+require 'erb'
+require 'activesupport'
+require 'tmpdir'
+require File.dirname(__FILE__) + '/css_dryer_2/processor'
+require File.dirname(__FILE__) + '/css_dryer_2/stylesheets_helper'
+require File.dirname(__FILE__) + '/css_dryer_2/ncss_handler'
+require File.dirname(__FILE__) + '/css_dryer_2/files_handler'

@@ -1,0 +1,11 @@
+body {
+  color: blue;
+  p {
+    color: red;
+  }
+}
+<% ie7 do %>
+h2 {
+  margin-top: 1em;
+}
+<% end %>
