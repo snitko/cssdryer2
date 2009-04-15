@@ -16,6 +16,10 @@ conventional css-syntax and write one-line css rules).
 
 1) 
 
+  sudo gem install css_dryer_2
+
+if from GitHub:
+
   sudo gem sources -a http://gems.github.com
   sudo gem install snitko-css_dryer_2
 
