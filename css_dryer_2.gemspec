@@ -1,4 +1,3 @@
-Gem::Specification.new do |s|
   s.name = "css_dryer_2"
   s.version = "0.1"
   s.author = "Roman Snitko"
@@ -11,4 +10,3 @@ Gem::Specification.new do |s|
   s.has_rdoc = true
   s.extra_rdoc_files = ["README.rdoc"]
   s.add_dependency("activeresource")
-end
