@@ -13,7 +13,7 @@ def generate_gemspec(options = {})
 end
 
 def list_files
-  files = FileList["{lib}/**/*", "{generators}/**/*"]
+  files = FileList["{lib}/**/*", "{generators}/**/*", "README.txt", "Rakefile", "USAGE.markdown", "Manifest.txt", "History.txt"]
 end
 def list_testfiles
   test_files = FileList["spec/**/*"]
