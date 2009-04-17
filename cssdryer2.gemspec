@@ -1,3 +1,4 @@
+Gem::Specification.new do |s|
   s.name = "cssdryer2"
   s.version = "0.1"
   s.author = "Roman Snitko"
@@ -8,3 +9,5 @@
   s.require_path = "lib"
   s.test_files = ["spec/spec.opts", "spec/lib", "spec/lib/files_handler_spec.rb", "spec/lib/css_dryer_test.rb", "spec/lib/ncss_handler_spec.rb", "spec/example.ncss", "spec/spec_helper.rb", "spec/tmp", "spec/tmp/css_dryer_2"]
   s.add_dependency("activeresource")
+
+end

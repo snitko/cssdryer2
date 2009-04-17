@@ -32,6 +32,6 @@ Rake::GemPackageTask.new(spec) do |pkg|
 end 
 
 task :generate_gemspec do
-  File.open('css_dryer_2.gemspec', 'w') { |f| f.puts generate_gemspec }
+  File.open('cssdryer2.gemspec', 'w') { |f| f.puts generate_gemspec(:in_block => true) }
   `cd #{File.dirname(__FILE__)} && rake check_manifest | patch`
 end
