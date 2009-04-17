@@ -1,12 +1,10 @@
-  s.name = "css_dryer_2"
+  s.name = "cssdryer2"
   s.version = "0.1"
   s.author = "Roman Snitko"
   s.email = "roman@snitko.ru"
-  s.homepage = "http://github.com/snitko/css_dryer_2"
+  s.homepage = "http://github.com/snitko/cssdryer2"
   s.summary = "Parses dry css files and generates conventional css"
   s.files = $files
   s.require_path = "lib"
   s.test_files = $test_files
-  s.has_rdoc = true
-  s.extra_rdoc_files = ["README.rdoc"]
   s.add_dependency("activeresource")

@@ -16,12 +16,12 @@ conventional css-syntax and write one-line css rules).
 
 1) 
 
-  sudo gem install css_dryer_2
+  sudo gem install cssdryer2
 
 if from GitHub:
 
   sudo gem sources -a http://gems.github.com
-  sudo gem install snitko-css_dryer_2
+  sudo gem install snitko-cssdryer2
 
 2) If you're planning to use it with rails application, then
 go to rails application folder and run 'script/generate css_dryer'.
@@ -29,7 +29,10 @@ This will generate neccessary rake tasks.
     
 3) Put this is config/environments/development.rb:
 
-  require 'css_dryer_2'
+  require 'cssdryer2'
+  
+  # in case it was installed from GitHub use re
+  require 'snitko-cssdryer2'
 
 4) In dev environment, to generate css on any changes in .ncss files, put this in ApplicationController:
 
