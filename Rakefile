@@ -21,14 +21,14 @@ end
  
 spec = eval(generate_gemspec(:in_block => true))
 
-Hoe.new('cssdryer2', '0.1') do |s|
+Hoe.new('cssdryer2', '0.1.1') do |s|
   s.rubyforge_name = 'cssdryer2'
   s.developer('Roman Snitko', 'roman@snitko.ru')
 end
 
 Rake::GemPackageTask.new(spec) do |pkg|
   pkg.need_tar = true
-  File.open('css_dryer_2.gemspec', 'w') { |f| f.puts generate_gemspec }
+  File.open('cssdryer2.gemspec', 'w') { |f| f.puts generate_gemspec(:in_block => true) }
 end 
 
 task :generate_gemspec do
