@@ -3,8 +3,8 @@ Manifest.txt
 README.txt
 Rakefile
 USAGE.markdown
-generators/css_dryer/css_dryer_generator.rb
-generators/css_dryer/templates/css_dryer_2.rake
+generators/cssdryer2/cssdryer2_generator.rb
+generators/cssdryer2/templates/cssdryer2.rake
 lib/css_dryer_2.rb
 lib/css_dryer_2/files_handler.rb
 lib/css_dryer_2/ncss_handler.rb

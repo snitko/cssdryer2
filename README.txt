@@ -31,7 +31,7 @@ This will generate neccessary rake tasks.
 
   require 'cssdryer2'
   
-  # in case it was installed from GitHub use re
+  # in case it was installed from GitHub use
   require 'snitko-cssdryer2'
 
 4) In dev environment, to generate css on any changes in .ncss files, put this in ApplicationController:
