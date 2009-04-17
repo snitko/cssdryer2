@@ -20,11 +20,6 @@ Adjust for using in other cases.
 1) 
 
   sudo gem install cssdryer2
-
-if from GitHub:
-
-  sudo gem sources -a http://gems.github.com
-  sudo gem install snitko-cssdryer2
     
 2) Put this is config/environments/development.rb:
 
