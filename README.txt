@@ -24,7 +24,7 @@ if from GitHub:
   sudo gem install snitko-cssdryer2
 
 2) If you're planning to use it with rails application, then
-go to rails application folder and run 'script/generate css_dryer'.
+go to rails application folder and run 'script/generate cssdryer2'.
 This will generate neccessary rake tasks.
     
 3) Put this is config/environments/development.rb:
