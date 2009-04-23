@@ -49,6 +49,13 @@ module StylesheetsHelper
     END
   end
 
+  # This actually ain't cool. It simply allows to set variables in pure ruby code
+  # (no ERB for now). Ideally, we would want a method,
+  # that includes another erb-ed ncss files.
+  def include_file(filename)
+    eval File.read("#{RAILS_ROOT}/public/stylesheets/ncss/#{filename}")
+  end
+
 
   private
 

@@ -21,7 +21,7 @@ end
  
 spec = eval(generate_gemspec(:in_block => true))
 
-Hoe.new('cssdryer2', '0.1.1') do |s|
+Hoe.new('cssdryer2', '0.1.2') do |s|
   s.rubyforge_name = 'cssdryer2'
   s.developer('Roman Snitko', 'roman@snitko.ru')
 end
