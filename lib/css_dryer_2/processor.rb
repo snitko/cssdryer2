@@ -192,7 +192,7 @@ module CssDryer
     end
 
     def combo_key(branch, leaf)  #:nodoc:
-      (leaf =~ /\A[.:#\[]/) ? "#{branch}#{leaf}" : "#{branch} #{leaf}"
+      (leaf =~ /\A[:\[]/) ? "#{branch}#{leaf}" : "#{branch} #{leaf}"
     end
 
     def factor_out_comma_separated_selectors(css, indent = 2)  #:nodoc:
