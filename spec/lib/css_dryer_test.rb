@@ -353,8 +353,8 @@ div {
   color: red;
 }
 div span { color: blue; }
-div a.hover { text-decoration: none; }
-div a.visited { text-decoration: none; }
+div a .hover { text-decoration: none; }
+div a .visited { text-decoration: none; }
 END
   end
 
@@ -382,11 +382,11 @@ END
 td {
   font-family: verdana;
 }
-td.even { background: blue;  }
-td.odd {
+td .even { background: blue;  }
+td .odd {
   background: green;
 }
-td.odd.odder-still { background: infra-red; }
+td .odd .odder-still { background: infra-red; }
 END
 
     assert_equal output, process(input)
@@ -413,7 +413,7 @@ a {
 a:link { color: #03c; }
 a:visited { color: #03c; }
 a:hover { color: #fff; background-color: #30c; text-decoration: none; }
-a.image:link {
+a .image:link {
   background: none;
   padding: 0;
 }
@@ -439,7 +439,7 @@ div {
   color: blue;
   border: 1px solid green;
 }
-div#flash {
+div #flash {
   background: yellow;
   font-size: x-large;
 }

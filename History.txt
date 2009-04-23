@@ -6,3 +6,10 @@
 
 * helper to include files in .ncss
 * critical fix in rake task template
+
+== 0.1.3
+
+* Parser behavior changes:
+  now ".head { .menu {color: black;} }" is compiled to
+  ".head .menu { color: black; }", not ".head.menu {color: black;}"
+  (note the space in the first example)
