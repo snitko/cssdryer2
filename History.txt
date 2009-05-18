@@ -13,3 +13,7 @@
   now ".head { .menu {color: black;} }" is compiled to
   ".head .menu { color: black; }", not ".head.menu {color: black;}"
   (note the space in the first example)
+
+== 0.1.4
+
+* Fixing bug with :force_compile option

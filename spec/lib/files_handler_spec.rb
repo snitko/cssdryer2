@@ -20,11 +20,31 @@ describe CssDryer2::FilesHandler do
 
     file_handler = CssDryer2::FilesHandler.new(
       :source_path  => spec_root_dir,
-      :compile_path => Dir.tmpdir + '/css_dryer_2_gem/css'
+      :compile_path => Dir.tmpdir + '/css_dryer_2_gem/css',
+      :force_compile => true
     )
 
-    file_handler.run(:force_compile => true)
+    file_handler.run()
     Dir.new(Dir.tmpdir + '/css_dryer_2_gem/css').entries.should include('example.css')
+  end
+
+  it "forces compile when the flag is set" do
+    file_handler = CssDryer2::FilesHandler.new(
+      :source_path  => spec_root_dir,
+      :compile_path => Dir.tmpdir + '/css_dryer_2_gem/css',
+      :force_compile => true
+    )
+    file_handler.should_receive(:prepare_file).with('example.ncss', true).once
+    file_handler.run
+  end
+  it "does not force compile if the flag is not set" do
+    file_handler = CssDryer2::FilesHandler.new(
+      :source_path  => spec_root_dir,
+      :compile_path => Dir.tmpdir + '/css_dryer_2_gem/css',
+      :force_compile => false
+    )
+    file_handler.should_receive(:prepare_file).with('example.ncss', false).once
+    file_handler.run
   end
 
   after(:each) do

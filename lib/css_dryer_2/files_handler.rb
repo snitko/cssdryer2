@@ -10,7 +10,7 @@ module CssDryer2
 
     def initialize(params = {})
 
-    @force_compile = false
+    @force_compile = params[:force_compile] || false
 
       if params[:settings] == :rails
         @source_path   = "#{RAILS_ROOT}/public/stylesheets/ncss"
@@ -30,10 +30,10 @@ module CssDryer2
       FileUtils.mkdir_p(@tmp_path + '/css_dryer_2') unless File.exist?(@tmp_path + '/css_dryer_2')
     end
 
-    def run(params = {})
+    def run()
       files = Dir.new(@source_path + '/').entries
       files.delete_if { |f| !File.file?(@source_path + "/#{f}") or !(f =~ /.ncss$/) }
-      files.each { |f| prepare_file(f, params[:force_compile] || @force_compile) }
+      files.each { |f| prepare_file(f, @force_compile) }
     end
 
     def self.configure   

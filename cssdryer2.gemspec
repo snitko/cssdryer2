@@ -1,6 +1,6 @@
 Gem::Specification.new do |s|
   s.name = "cssdryer2"
-  s.version = "0.1.3"
+  s.version = "0.1.4"
   s.author = "Roman Snitko"
   s.email = "roman@snitko.ru"
   s.homepage = "http://github.com/snitko/cssdryer2"
